@@ -1,0 +1,257 @@
+header {
+  position: fixed;
+  width: 100%;
+  height: 8vh;
+  margin-left: 20px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: black;
+  display: flex;
+  font-size: large;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.nav-logo img {
+  height: 220px;
+  width: auto;
+}
+
+.nav-menu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+.nav-list li a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-list li a:hover {
+  color: #ffcf67ed;
+}
+
+.button-container {
+  display: flex;
+  gap: 18px;
+  padding: 8px 16px;
+}
+.btn-login {
+  padding: 10px 25px;
+  color: black;
+  text-decoration: none;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.7s;
+}
+.btn-login:hover {
+  background-color: #4e9b5d;
+  color: white;
+}
+
+.btn-signup {
+  padding: 10px 25px;
+  text-decoration: none;
+  background: black;
+  color: white;
+  border: 2px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.7s;
+}
+.btn-signup:hover {
+  background-color: #e0a426;
+  color: rgb(255, 255, 255);
+  border: 1px solid #000000;
+}
+
+.home-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+}
+.home-section .bg-home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(60%);
+}
+
+.home-section .bg-home::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.home-section h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.home-section p {
+  font-size: 20px;
+  max-width: 600px;
+}
+.home-section .button {
+  padding: 12px 24px;
+  border-radius: 12px;
+  background-color: #2d7a4a;
+  color: rgb(255, 255, 255);
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.7s;
+}
+.home-section .button:hover {
+  background-color: #e0a426;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background-color: #2d7a4a;
+  color: white;
+}
+
+.logo-slider {
+  background: rgba(255, 255, 255, 0.68);
+  overflow: hidden;
+}
+
+.slider {
+  height: 100px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(250px * 16);
+  animation: scroll 20s linear infinite;
+}
+
+.slide {
+  height: 100px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: grayscale(100%);
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.slide:hover {
+  fill: grayscale(0%);
+  opacity: 1;
+}
+
+.slide img {
+  height: 80px;
+  object-fit: contain;
+  margin: 0 15px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+.slider:hover .slide-track {
+  animation-play-state: paused;
+}
+
+#properties {
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+
+#services {
+  padding-top: 50px;
+  padding-bottom: 80px;
+  background-color: #f8f9fa;
+}
+
+.accordion-item {
+  border: 2px solid #198754;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.accordion-button {
+  border: none;
+  box-shadow: none;
+}
+
+.accordion-button {
+  border: none;
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #198754;
+  color: white;
+}
+
+footer {
+  background-image: linear-gradient(to right, #4e9b5d, #e0a426);
+  color: white;
+}
+
+#contact {
+  padding-top: 20px;
+  padding-bottom: 80px;
+}
+
+#contact .form-control {
+  border-radius: 8px;
+}
+
+#contact button {
+  border-radius: 8px;
+}
